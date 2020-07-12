@@ -12,8 +12,10 @@
 للشكل
 
 المكتبات المستخدمة:
+
 1-https://github.com/bitluni/ESP32Lib 
-مع تعديل بسيط في ملف GfxWrapper.h ليقبل تدوير الشاشة 
+مع تعديل بسيط في ملف GfxWrapper.h 
+ليقبل تدوير الشاشة 
 
 2-https://github.com/adafruit/Adafruit-GFX-Library
 
