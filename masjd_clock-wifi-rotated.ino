@@ -11,7 +11,7 @@
 // vga  redPin = 25;
 // vga  hsyncPin = 26;
 // vga  vsyncPin = 27;
-
+// RELAY 19
 //libs for sqlite db
 #include <stdio.h>
 #include <stdlib.h>
@@ -61,8 +61,19 @@ struct tm timeinfo;
 const char* ntpServer = "pool.ntp.org";
 const long  gmtOffset_sec = 3601; //+1GMT
 const int   daylightOffset_sec = 0; 
+#define RELAY 19
 
-//var to save sql request
+const char* ssid = "m";
+const char* password = "12345678+";
+//// Set your Static IP address
+//IPAddress local_IP(192, 168, 43, 77);
+//// Set your Gateway IP address
+//IPAddress gateway(192, 168, 43, 1);
+//IPAddress subnet(255, 255, 255, 0);
+//IPAddress primaryDNS(8, 8, 8, 8);   //optional
+//IPAddress secondaryDNS(1, 1, 1, 1); //optional
+
+//vars to save sql request
 char HijriDate[13],GeoDate[13],Fajr[6],Shurooq[6], Dhuhr[6], Asr[6], Maghrib[6],Isha[6];
 int d,H_year, H_month,H_day ;// hidjri date
 int minutes ;
@@ -90,21 +101,6 @@ String CurrentTime;
 RtcDateTime ntp_time,now;
 ThreeWire myWire(4,5,2); // IO, SCLK, CE - RTC clock
 RtcDS1302<ThreeWire> Rtc(myWire);
-
-const char* ssid = "AT-4GLTE-H";
-const char* password = "wassim@gmail.com";
-
-//const char* ssid = "m";
-//const char* password = "12345678+";
-//// Set your Static IP address
-//IPAddress local_IP(192, 168, 43, 77);
-//// Set your Gateway IP address
-//IPAddress gateway(192, 168, 43, 1);
-//IPAddress subnet(255, 255, 255, 0);
-//IPAddress primaryDNS(8, 8, 8, 8);   //optional
-//IPAddress secondaryDNS(1, 1, 1, 1); //optional
-
-#define RELAY 19
 
 //for sqlite functions
 /* You only need to format SPIFFS the first time you run a
