@@ -30,21 +30,27 @@
 
 VGA:
 1-https://github.com/bitluni/ESP32Lib 
-مع تعديل بسيط في ملف GfxWrapper.h 
-ليقبل تدوير الشاشة 
+(GfxWrapper.h needs a patch for rotation )
+
 2-https://github.com/adafruit/Adafruit-GFX-Library
 
 
 DB:
+
 3-https://github.com/siara-cc/esp32_arduino_sqlite3_lib
 
 
 Rtc time:
+
 4-https://github.com/Makuna/Rtc//clock 
 
 
 WEB server and OTA:
+
 5-https://github.com/ayushsharma82/AsyncElegantOTA
+
 6-https://github.com/me-no-dev/ESPAsyncWebServer
+
 7-https://github.com/me-no-dev/AsyncTCP
+
 أرحب بشدة بأي مساهمة لتحسين المشروع
